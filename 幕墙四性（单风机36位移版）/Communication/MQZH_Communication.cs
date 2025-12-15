@@ -176,7 +176,7 @@ namespace MQZHWL.Communication
         /// <summary>
         /// PLC读取数据寄存器数量
         /// </summary>
-        static readonly int DataLenNeedRead = 64;                                            //参数组长度D300-D363
+        static readonly int DataLenNeedRead = 66;                                            //参数组长度D300-D363，临时增加364-365
 
         /// <summary>
         /// PLC程控指令数据长度

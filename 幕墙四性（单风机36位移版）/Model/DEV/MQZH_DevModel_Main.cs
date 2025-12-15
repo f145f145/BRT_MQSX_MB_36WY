@@ -154,6 +154,42 @@ namespace MQZHWL.Model.DEV
         #endregion
 
 
+
+        /// <summary>
+        /// 临时测试数据1
+        /// </summary>
+        private int _tempData1 = 0;
+        /// <summary>
+        /// 临时测试数据1
+        /// </summary>
+        public int TempData1
+        {
+            get { return _tempData1; }
+            set
+            {
+                _tempData1 = value;
+                RaisePropertyChanged(() => TempData1);
+            }
+        }
+
+        /// <summary>
+        /// 临时测试数据2
+        /// </summary>
+        private int _tempData2 = 0;
+        /// <summary>
+        /// 临时测试数据2
+        /// </summary>
+        public int TempData2
+        {
+            get { return _tempData2; }
+            set
+            {
+                _tempData2 = value;
+                RaisePropertyChanged(() => TempData2);
+            }
+        }
+
+
         #region 数据定时更新消息
 
         /// <summary>
@@ -174,7 +210,7 @@ namespace MQZHWL.Model.DEV
                     bool[] boolValues3;
                     bool[] boolValues4;
                     bool[] boolValuesAll = new bool[64];
-                    int[] transIntValues = new int[60];
+                    int[] transIntValues = new int[62];
                     ushort[] ffStatus = new ushort[13];
 
                     //解析状态---------------------------
@@ -205,6 +241,11 @@ namespace MQZHWL.Model.DEV
                     {
                         transIntValues[i - 4] = MQZH_ValueCvtBLL.GetShortFromUshort(inArry, i);
                     }
+
+                    //临时测试用
+                    TempData1 = transIntValues[60];
+                    TempData2= transIntValues[61];
+
 
                     //差压、风速         
                     Mod_AD4.Channels[0].DataRealTime = Convert.ToDouble(transIntValues[15]);

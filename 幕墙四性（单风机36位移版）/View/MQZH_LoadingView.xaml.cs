@@ -4,6 +4,7 @@ using System.Windows;
 using MQZHWL.View.Authorize;
 using MQZHWL.Model;
 using Authorize;
+using System.Threading;
 
 namespace MQZHWL.View
 {
@@ -20,15 +21,15 @@ namespace MQZHWL.View
             //授权检查
             AuthorizeMQ.AppType = 28;        //软件类型为幕墙
             AuthorizeMQ.AuthDAL=new AuthorizeDAL(AuthorizeMQ.AppType);
-            //if (!CheckIn())
-            //{
-            //    AuthorizeMQ.AuthDAL.SaveSN("");
-            //    Info.Content = "授权验证失败，请重新注册！";
-            //    ReAuthorize.Visibility = Visibility.Visible;
-            //    return;
-            //}
-            //else
-            //    ReAuthorize.Visibility = Visibility.Hidden;
+            if (!CheckIn())
+            {
+                AuthorizeMQ.AuthDAL.SaveSN("");
+                Info.Content = "授权验证失败，请重新注册！";
+                ReAuthorize.Visibility = Visibility.Visible;
+                return;
+            }
+            else
+                ReAuthorize.Visibility = Visibility.Hidden;
             //授权验证通过后，更新最后运行时间。
             AuthorizeMQ.AuthDAL.SaveLastTime();
 
@@ -40,6 +41,7 @@ namespace MQZHWL.View
             }
             //进入系统
             GetIn();
+            Thread.Sleep(1000);
             this.Close();
         }
 

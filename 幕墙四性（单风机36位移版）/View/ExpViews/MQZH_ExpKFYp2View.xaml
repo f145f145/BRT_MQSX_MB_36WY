@@ -379,6 +379,10 @@
                             </StackPanel>
                         </Button.Content>
                     </Button>
+
+                    <Label Content="{Binding Dev.TempData1,Mode=OneWay}" ContentStringFormat="{}{0:0}" Style="{StaticResource Label2}" Grid.Row="2" Grid.Column ="1"/>
+                    <Label Content="{Binding Dev.TempData2,Mode=OneWay}" ContentStringFormat="{}{0:0}" Style="{StaticResource Label2}" Grid.Row="3" Grid.Column ="1"/>
+
                 </Grid>
             </Border>
 
