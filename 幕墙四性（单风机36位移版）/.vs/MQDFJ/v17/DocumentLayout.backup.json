@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code\\BRT\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|d:\\code\\brt\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\bll\\mqzh_expbll_kfy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|solutionrelative:bll\\mqzh_expbll_kfy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|d:\\code\\brt\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\bll\\mqzh_expbll_sm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|solutionrelative:bll\\mqzh_expbll_sm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Code\\BRT\\BRT_MQSX_MB_36WY\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -37,59 +28,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "c4f41c4a-07e1-482e-9462-5f4e9001bc4e",
-        "Display": 0,
-        "X": 32,
-        "Y": 113,
-        "Width": 1310,
-        "Height": 812,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MQZH_ExpBLL_KFY.cs",
-              "DocumentMoniker": "D:\\Code\\BRT\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_KFY.cs",
-              "RelativeDocumentMoniker": "BLL\\MQZH_ExpBLL_KFY.cs",
-              "ToolTip": "D:\\Code\\BRT\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_KFY.cs",
-              "RelativeToolTip": "BLL\\MQZH_ExpBLL_KFY.cs",
-              "ViewState": "AgIAAGcDAAAAAAAAAAAIwH0DAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:07:10.668Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MQZH_ExpBLL_SM.cs",
-              "DocumentMoniker": "D:\\Code\\BRT\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_SM.cs",
-              "RelativeDocumentMoniker": "BLL\\MQZH_ExpBLL_SM.cs",
-              "ToolTip": "D:\\Code\\BRT\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_SM.cs",
-              "RelativeToolTip": "BLL\\MQZH_ExpBLL_SM.cs",
-              "ViewState": "AgIAANUCAAAAAAAAAAAYwOMCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:07:14.39Z",
-              "EditorCaption": ""
             }
           ]
         }

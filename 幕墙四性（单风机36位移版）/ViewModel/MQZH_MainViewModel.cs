@@ -3339,9 +3339,10 @@ namespace MQZHWL.ViewModel
                 double y = 0;
                 System.Windows.Point newPoint;
 
-                for (int i = 0; i < ExpDQ.Exp_KFY.DisplaceGroups.Count; i++)
-                {
-                    if (ExpDQ.Exp_KFY.DisplaceGroups[i].Is_Use)
+             //   for (int i = 0; i < ExpDQ.Exp_KFY.DisplaceGroups.Count; i++)
+                    for (int i = 0; i <3; i++)
+                    {
+                        if (ExpDQ.Exp_KFY.DisplaceGroups[i].Is_Use)
                     {
                         if (ExpDQ.Exp_KFY.IsGC)
                         {
