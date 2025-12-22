@@ -174,7 +174,7 @@ namespace MQZHWL.Model.DEV
                     bool[] boolValues3;
                     bool[] boolValues4;
                     bool[] boolValuesAll = new bool[64];
-                    int[] transIntValues = new int[60];
+                    int[] transIntValues = new int[62];
                     ushort[] ffStatus = new ushort[13];
 
                     //解析状态---------------------------
@@ -205,6 +205,10 @@ namespace MQZHWL.Model.DEV
                     {
                         transIntValues[i - 4] = MQZH_ValueCvtBLL.GetShortFromUshort(inArry, i);
                     }
+
+                    //-----------临时测试
+                    PressSet = transIntValues[60];
+                    PressDQ = transIntValues[61];
 
                     //差压、风速         
                     Mod_AD4.Channels[0].DataRealTime = Convert.ToDouble(transIntValues[15]);

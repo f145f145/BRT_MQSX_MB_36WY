@@ -339,6 +339,15 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
+
+                    <Label Content="{Binding Dev.PressSet,Mode=OneWay}" ContentStringFormat="{}{0:0}给定" Style="{StaticResource Label2}" Grid.Row="2" Grid.Column ="0" FontSize="14"/>
+                    <Label Content="{Binding Dev.PressDQ,Mode=OneWay}" ContentStringFormat="{}{0:0}当前" Style="{StaticResource Label2}" Grid.Row="2" Grid.Column ="1" FontSize="14"/>
+                    <Label Content="{Binding Dev.PressH,Mode=OneWay}" ContentStringFormat="{}{0:0.00}高" Style="{StaticResource Label2}" Grid.Row="3" Grid.Column ="0" FontSize="14"/>
+                    <Label Content="{Binding Dev.PressL,Mode=OneWay}" ContentStringFormat="{}{0:0.00}低" Style="{StaticResource Label2}" Grid.Row="3" Grid.Column ="1" FontSize="14"/>
+                    <Label Content="{Binding Dev.Press10,Mode=OneWay}" ContentStringFormat="{}{0:0}-10" Style="{StaticResource Label2}" Grid.Row="3" Grid.Column ="2" FontSize="14"/>
+
+
+
                     <Label Content="压力大：" Style="{StaticResource Label1}" Grid.Row="0" Grid.Column ="0"/>
                     <Label Content="风机频率：" Style="{StaticResource Label1}" Grid.Row="1" Grid.Column ="0"/>
                     <Label Content="{Binding Dev.AIList[2].ValueFinal,Mode=OneWay}" ContentStringFormat="{}{0:0}" Style="{StaticResource Label2}" Grid.Row="0" Grid.Column ="1"/>

@@ -23,6 +23,91 @@ namespace MQZHWL.Model.DEV
 {
     public partial class MQZH_DevModel_Main : ObservableObject
     {
-       
+
+        /// <summary>
+        /// 测试给定压力
+        /// </summary>
+        private int _pressSet = 0;
+        /// <summary>
+        /// 测试给定压力
+        /// </summary>
+        public int PressSet
+        {
+            get { return _pressSet; }
+            set
+            {
+                _pressSet = value;
+                RaisePropertyChanged(() => PressSet);
+            }
+        }
+
+        /// <summary>
+        /// 测试当前压力
+        /// </summary>
+        private int _pressDQ = 0;
+        /// <summary>
+        /// 测试当前压力
+        /// </summary>
+        public int PressDQ
+        {
+            get { return _pressDQ; }
+            set
+            {
+                _pressDQ = value;
+                RaisePropertyChanged(() => PressDQ);
+            }
+        }
+
+        /// <summary>
+        /// 测试高压压力
+        /// </summary>
+        private double _pressH = 0;
+        /// <summary>
+        /// 测试高压压力
+        /// </summary>
+        public double PressH
+        {
+            get { return _pressH; }
+            set
+            {
+                _pressH = value;
+                RaisePropertyChanged(() => PressH);
+            }
+        }
+
+        /// <summary>
+        /// 测试低压压力
+        /// </summary>
+        private double _pressL = 0;
+        /// <summary>
+        /// 测试低压压力
+        /// </summary>
+        public double PressL
+        {
+            get { return _pressL; }
+            set
+            {
+                _pressL = value;
+                RaisePropertyChanged(() => PressL);
+            }
+        }
+
+        /// <summary>
+        /// 测试指令10
+        /// </summary>
+        private int _press10 = 0;
+        /// <summary>
+        /// 测试指令10
+        /// </summary>
+        public int Press10
+        {
+            get { return _press10; }
+            set
+            {
+                _press10 = value;
+                RaisePropertyChanged(() => Press10);
+            }
+        }
+
     }
 }

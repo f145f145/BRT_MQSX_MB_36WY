@@ -1041,6 +1041,13 @@ namespace MQZHWL.BLL
 
                         #region -----低压压力准备----------
 
+
+
+                        //故障测试用------------
+                        BllDev.PressH = tempAimH;
+                        BllDev.PressL = tempAimL;
+                        BllDev.Press10 = PLCCKCMDFrmBLL[10];
+
                         if (!BllExp.Exp_KFY.Step_DQ.StepWavePLowStatus.IsKeepPressCompleted)
                         {
                             if (PPressTest)
