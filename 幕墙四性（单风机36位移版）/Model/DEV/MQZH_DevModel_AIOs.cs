@@ -556,7 +556,47 @@ namespace MQZHWL.Model.DEV
         private void SetZeroMessage(string msg)
         {
             string order = msg.Clone().ToString();
-            if (order == "WY01")
+            if (order == "WYall")
+            {
+                AIList[14].ZeroCalValue = 0 - AIList[14].ValueCaledNonZero * AIList[14].KCalValue;
+                AIList[15].ZeroCalValue = 0 - AIList[15].ValueCaledNonZero * AIList[15].KCalValue;
+                AIList[16].ZeroCalValue = 0 - AIList[16].ValueCaledNonZero * AIList[16].KCalValue;
+                AIList[17].ZeroCalValue = 0 - AIList[17].ValueCaledNonZero * AIList[17].KCalValue;
+                AIList[18].ZeroCalValue = 0 - AIList[18].ValueCaledNonZero * AIList[18].KCalValue;
+                AIList[19].ZeroCalValue = 0 - AIList[19].ValueCaledNonZero * AIList[19].KCalValue;
+                AIList[20].ZeroCalValue = 0 - AIList[20].ValueCaledNonZero * AIList[20].KCalValue;
+                AIList[21].ZeroCalValue = 0 - AIList[21].ValueCaledNonZero * AIList[21].KCalValue;
+                AIList[22].ZeroCalValue = 0 - AIList[22].ValueCaledNonZero * AIList[22].KCalValue;
+                AIList[23].ZeroCalValue = 0 - AIList[23].ValueCaledNonZero * AIList[23].KCalValue;
+                AIList[24].ZeroCalValue = 0 - AIList[24].ValueCaledNonZero * AIList[24].KCalValue;
+                AIList[25].ZeroCalValue = 0 - AIList[25].ValueCaledNonZero * AIList[25].KCalValue;
+                AIList[26].ZeroCalValue = 0 - AIList[26].ValueCaledNonZero * AIList[26].KCalValue;
+                AIList[27].ZeroCalValue = 0 - AIList[27].ValueCaledNonZero * AIList[27].KCalValue;
+                AIList[28].ZeroCalValue = 0 - AIList[28].ValueCaledNonZero * AIList[28].KCalValue;
+                AIList[29].ZeroCalValue = 0 - AIList[29].ValueCaledNonZero * AIList[29].KCalValue;
+                AIList[30].ZeroCalValue = 0 - AIList[30].ValueCaledNonZero * AIList[30].KCalValue;
+                AIList[31].ZeroCalValue = 0 - AIList[31].ValueCaledNonZero * AIList[31].KCalValue;
+                AIList[32].ZeroCalValue = 0 - AIList[32].ValueCaledNonZero * AIList[32].KCalValue;
+                AIList[33].ZeroCalValue = 0 - AIList[33].ValueCaledNonZero * AIList[33].KCalValue;
+                AIList[34].ZeroCalValue = 0 - AIList[34].ValueCaledNonZero * AIList[34].KCalValue;
+                AIList[35].ZeroCalValue = 0 - AIList[35].ValueCaledNonZero * AIList[35].KCalValue;
+                AIList[36].ZeroCalValue = 0 - AIList[36].ValueCaledNonZero * AIList[36].KCalValue;
+                AIList[37].ZeroCalValue = 0 - AIList[37].ValueCaledNonZero * AIList[37].KCalValue;
+                AIList[38].ZeroCalValue = 0 - AIList[38].ValueCaledNonZero * AIList[38].KCalValue;
+                AIList[39].ZeroCalValue = 0 - AIList[39].ValueCaledNonZero * AIList[39].KCalValue;
+                AIList[40].ZeroCalValue = 0 - AIList[40].ValueCaledNonZero * AIList[40].KCalValue;
+                AIList[41].ZeroCalValue = 0 - AIList[41].ValueCaledNonZero * AIList[41].KCalValue;
+                AIList[42].ZeroCalValue = 0 - AIList[42].ValueCaledNonZero * AIList[42].KCalValue;
+                AIList[43].ZeroCalValue = 0 - AIList[43].ValueCaledNonZero * AIList[43].KCalValue;
+                AIList[44].ZeroCalValue = 0 - AIList[44].ValueCaledNonZero * AIList[44].KCalValue;
+                AIList[45].ZeroCalValue = 0 - AIList[45].ValueCaledNonZero * AIList[45].KCalValue;
+                AIList[46].ZeroCalValue = 0 - AIList[46].ValueCaledNonZero * AIList[46].KCalValue;
+                AIList[47].ZeroCalValue = 0 - AIList[47].ValueCaledNonZero * AIList[47].KCalValue;
+                AIList[48].ZeroCalValue = 0 - AIList[48].ValueCaledNonZero * AIList[48].KCalValue;
+                AIList[49].ZeroCalValue = 0 - AIList[49].ValueCaledNonZero * AIList[49].KCalValue;
+            }
+
+            else if (order == "WY01")
             {
                 AIList[14].ZeroCalValue = 0 - AIList[14].ValueCaledNonZero * AIList[14].KCalValue;
             }

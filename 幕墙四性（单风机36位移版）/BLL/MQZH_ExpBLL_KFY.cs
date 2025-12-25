@@ -18,6 +18,7 @@ using static MQZHWL.Model.MQZH_Enums;
 using CtrlMethod;
 using GalaSoft.MvvmLight.Messaging;
 using MQZHWL.Model;
+using System.Collections.ObjectModel;
 
 namespace MQZHWL.BLL
 {
@@ -85,35 +86,37 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
 
                     if (StageNOInList == 1)
                     {
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_Z[0][9] = 0;
                     }
                     if (StageNOInList == 3)
                     {
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJBX_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJBX_F[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }
@@ -483,35 +486,64 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
 
+                    //if (StageNOInList == 1)
+                    //{
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                    //}
+                    //if (StageNOInList == 3)
+                    //{
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
+                    //    BllExp.ExpData_KFY.WY_GCBX_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                    //}
+
                     if (StageNOInList == 1)
                     {
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_Z[0][9] = 0;
                     }
                     if (StageNOInList == 3)
                     {
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCBX_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCBX_F[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }
@@ -860,6 +892,8 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
@@ -1236,6 +1270,8 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
@@ -1614,35 +1650,37 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
 
                     if (StageNOInList == 6)
                     {
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_Z[0][9] = 0;
                     }
                     if (StageNOInList == 7)
                     {
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJP3_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJP3_F[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }
@@ -1989,29 +2027,29 @@ namespace MQZHWL.BLL
 
                     if (StageNOInList == 6)
                     {
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_Z[0][9] = 0;
                     }
                     if (StageNOInList == 7)
                     {
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCP3_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCP3_F[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }
@@ -2369,35 +2407,37 @@ namespace MQZHWL.BLL
                 //更新初值
                 if (!InitialValueSaved)
                 {
+                    Messenger.Default.Send<string>("WYall", "SetZeroMessage");  //位移自动调零
+
                     BllExp.Exp_KFY.DisplaceGroups[0].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[1].SetWYCS();
                     BllExp.Exp_KFY.DisplaceGroups[2].SetWYCS();
 
                     if (StageNOInList == 6)
                     {
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_Z[0][9] = 0;
                     }
                     if (StageNOInList == 7)
                     {
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_DJPmax_F[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_DJPmax_F[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }
@@ -2669,29 +2709,29 @@ namespace MQZHWL.BLL
 
                     if (StageNOInList == 8)
                     {
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][9] = 0;
                     }
                     if (StageNOInList == 9)
                     {
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][0] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][1] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][2] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][3] = BllExp.Exp_KFY.DisplaceGroups[0].WY_DQ[3];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][4] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][5] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][6] = BllExp.Exp_KFY.DisplaceGroups[1].WY_DQ[2];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][7] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[0];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][8] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[1];
-                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][9] = BllExp.Exp_KFY.DisplaceGroups[2].WY_DQ[2];
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][0] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][1] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][2] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][3] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][4] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][5] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][6] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][7] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][8] = 0;
+                        BllExp.ExpData_KFY.WY_GCPmax_Z[0][9] = 0;
                     }
                     InitialValueSaved = true;
                 }

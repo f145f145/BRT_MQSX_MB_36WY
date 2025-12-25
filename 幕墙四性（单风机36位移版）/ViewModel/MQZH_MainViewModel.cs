@@ -469,6 +469,10 @@ namespace MQZHWL.ViewModel
 
 
             //自动调零
+            else if (i == 8599)
+            {
+                Messenger.Default.Send<string>("WYall", "SetZeroMessage");
+            }
             else if (i == 8551)
             {
                 Messenger.Default.Send<string>("WY01", "SetZeroMessage");

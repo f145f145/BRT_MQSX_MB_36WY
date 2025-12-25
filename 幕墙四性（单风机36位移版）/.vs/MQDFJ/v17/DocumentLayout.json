@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Work\\Uper\\BRT_MQSX_MB_36WY\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|e:\\work\\uper\\brt_mqsx_mb_36wy\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\bll\\mqzh_expbll_kfy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51FC310A-821D-4627-B9D5-71836DADB0F0}|MQDFJ.csproj|solutionrelative:bll\\mqzh_expbll_kfy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 113,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MQZH_ExpBLL_KFY.cs",
-              "DocumentMoniker": "E:\\Work\\Uper\\BRT_MQSX_MB_36WY\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_KFY.cs",
-              "RelativeDocumentMoniker": "BLL\\MQZH_ExpBLL_KFY.cs",
-              "ToolTip": "E:\\Work\\Uper\\BRT_MQSX_MB_36WY\\\u5E55\u5899\u56DB\u6027\uFF08\u5355\u98CE\u673A36\u4F4D\u79FB\u7248\uFF09\\BLL\\MQZH_ExpBLL_KFY.cs",
-              "RelativeToolTip": "BLL\\MQZH_ExpBLL_KFY.cs",
-              "ViewState": "AQIAABUEAAAAAAAAAAAIwCgEAAB3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T12:13:29.044Z",
-              "EditorCaption": ""
             }
           ]
         },

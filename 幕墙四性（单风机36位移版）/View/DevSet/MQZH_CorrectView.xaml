@@ -4533,6 +4533,7 @@
             </TabItem>
 
         </TabControl>
+        <Button Content="所有位移调零" Command="{Binding DevSetCommand}" CommandParameter="8599" Grid.Row="1" Grid.Column ="0" Height="35" Width="120" FontSize="16" Margin="0 0 200 0" HorizontalAlignment="Right" VerticalAlignment="Center" IsDefault="True"/>
         <Button Content="保存设置" Command="{Binding DevSetCommand}" CommandParameter="12" Grid.Row="1" Grid.Column ="1" Template="{StaticResource Button1}" HorizontalAlignment="Left" VerticalAlignment="Center" IsDefault="True"/>
         <Button Content="取消修改" Command="{Binding DevSetCommand}" CommandParameter="99"  Grid.Row="1" Grid.Column ="1" Template="{StaticResource Button1}" HorizontalAlignment="Right" VerticalAlignment="Center" IsCancel="True"/>
         <Label Content="修改后请先保存再关闭窗口！" Margin ="10"  Grid.Row="1" Grid.Column ="0" Style="{StaticResource Label2}"/>
